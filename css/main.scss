@@ -3,8 +3,6 @@
 ---
 @charset "utf-8";
 
-@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css";
-
 // Our variables
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
@@ -47,8 +45,12 @@ $on-laptop:        800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "building",
         "base",
         "layout",
         "syntax-highlighting",
-        "creactive"
+        "creactive",
+        "nav",
+        "header",
+        "bootstrap_hacks"
 ;

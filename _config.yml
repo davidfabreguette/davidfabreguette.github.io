@@ -22,3 +22,4 @@ markdown: kramdown
 gems:
   - jekyll-contentblocks
   - jekyll-angular
+  - jekyll-coffeescript

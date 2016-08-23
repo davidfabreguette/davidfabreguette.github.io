@@ -1,0 +1,17 @@
+body.building {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('https://media.giphy.com/media/3orieQSwXb5RNfhBL2/giphy.gif');
+  // background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('https://media.giphy.com/media/HOHc63ryfAyI/giphy.gif');
+  background-size: cover;
+  background-position: center;
+  padding-top: 50px;
+  h1 {
+    color:white;
+    font-size: 45px;
+    text-transform: uppercase;
+  }
+  p {
+    font-family: $base-font-family;
+    font-size: 17px;
+    color:white;
+  }
+}

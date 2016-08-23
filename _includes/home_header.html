@@ -1,10 +1,12 @@
-<header>
+<header class="home" ng-controller="HomeHeader">
     <div class="header-content">
         <div class="header-content-inner">
-            <h1 id="homeHeading">Faits pour rester émerveillés</h1>
-            <hr>
-            <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-            <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+            <h1 id="homeHeading" du-parallax y="mainTitle">Réver. Aimer. S'amuser !</h1>
+            <hr du-parallax y="subTitle">
+            <p du-parallax y="subTitle">Un blog qui regroupe Musique, Dévelopement Web et Articles divers.</p>
+            <a du-parallax y="button" href="#about" class="btn btn-primary btn-xl page-scroll btn-square btn-iconed">
+              <i class="fa fa-angle-double-down"></i>
+            </a>
         </div>
     </div>
 </header>
