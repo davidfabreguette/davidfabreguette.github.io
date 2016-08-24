@@ -1,0 +1,242 @@
+//CSS LESS SCRIPTS
+@mixin rounded-corners($radius: 5px) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+@mixin rounded-corners-top($radius: 5px) {
+  border-top-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-radius-topright: $radius;
+  border-top-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-radius-topleft: $radius;
+}
+@mixin rounded-corners-top-left($radius: 5px) {
+  border-top-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-radius-topleft: $radius;
+}
+@mixin rounded-corners-top-right($radius: 5px) {
+  border-top-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-radius-topright: $radius;
+}
+@mixin rounded-corners-bottom-left($radius: 5px) {
+  border-bottom-left-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  -moz-border-radius-bottomleft: $radius;
+}
+@mixin rounded-corners-bottom-right($radius: 5px) {
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+}
+@mixin rounded-corners-top-right($radius: 5px) {
+  border-top-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-radius-topright: $radius;
+}
+@mixin rounded-corners-bottom($radius: 5px) {
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  border-bottom-left-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  -moz-border-radius-bottomleft: $radius;
+}
+@mixin rounded-corners-left($radius: 5px) {
+  border-top-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-radius-topleft: $radius;
+  border-bottom-left-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  -moz-border-radius-bottomleft: $radius;
+}
+@mixin rounded-corners-right($radius: 5px, $important: '') {
+  border-top-right-radius: $radius #{$important};
+  -webkit-border-top-right-radius: $radius #{$important};
+  -moz-border-radius-topright: $radius #{$important};
+  border-bottom-right-radius: $radius #{$important};
+  -webkit-border-bottom-right-radius: $radius #{$important};
+  -moz-border-radius-bottomright: $radius #{$important};
+}
+@mixin rounded-corners-full($top_left: 2px, $top_right:2px,$bottom_right:2px, $bottom_left:2px) {
+//TOP LEFT
+  border-top-left-radius: $top_left;
+  -webkit-border-top-left-radius: $top_left;
+  -moz-border-radius-topleft: $top_left;
+
+//TOP RIGHT
+  border-top-right-radius: $top_right;
+  -webkit-border-top-right-radius: $top_right;
+  -moz-border-radius-topright: $top_right;
+
+//BOTTOM RIGHT
+  border-bottom-right-radius: $bottom_right;
+  -webkit-border-bottom-right-radius: $bottom_right;
+  -moz-border-radius-bottomright: $bottom_right;
+
+//BOTTOM LEFT
+  border-bottom-left-radius: $bottom_left;
+  -webkit-border-bottom-left-radius: $bottom_left;
+  -moz-border-radius-bottomleft: $bottom_left;
+
+}
+
+@mixin box-shadow-dark($x: 0, $y: 0, $blur: 1px, $alpha: 0.5) {
+  $val: $x $y $blur rgba(0, 0, 0, $alpha);
+
+  box-shadow:         $val;
+  -webkit-box-shadow: $val;
+  -moz-box-shadow:    $val;
+}
+@mixin box-shadow-color($x: 0, $y: 0, $blur: 1px, $alpha: 0.5,$color: black) {
+  $val: $x $y $blur $color;
+
+  box-shadow:         $val;
+  -webkit-box-shadow: $val;
+  -moz-box-shadow:    $val;
+}
+@mixin text-shadow-color($x: 0, $y: 0, $blur: 1px, $color: red) {
+  $val: $x $y $blur $color;
+
+  text-shadow:         $val;
+  -webkit-text-shadow: $val;
+  -moz-text-shadow:    $val;
+}
+@mixin text-shadow-dark($x: 0, $y: 0, $blur: 1px, $alpha: 0.5) {
+  $val: $x $y $blur rgba(0, 0, 0, $alpha);
+
+  text-shadow:         $val;
+  -webkit-text-shadow: $val;
+  -moz-text-shadow:    $val;
+}
+@mixin text-shadow-stamp()
+{
+  text-shadow: 0px -1px 1px #2c4d93;
+}
+@mixin text-shadow-stamp-white()
+{
+  text-shadow: 0px -1px 1px #ffffff ;
+}
+@mixin text-shadow-stamp-color($color)
+{
+  text-shadow: 0px -1px 1px $color;
+}
+@mixin text-shadow-erase($anyImportant: "") {
+  text-shadow: 0px 0px 0px transparent $anyImportant;
+}
+@mixin box-shadow-erase($anyImportant: "") {
+  box-shadow: 0px 0px 0px transparent $anyImportant;
+}
+@mixin rotate($deg: 2deg){
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+}
+@mixin transition-custom($lasting:1s, $style: all){
+  -webkit-transition: $style $lasting ease;
+  -moz-transition: $style $lasting ease;
+  -ms-transition: $style $lasting ease;
+  -o-transition: $style $lasting ease;
+  transition: $style $lasting ease;
+}
+@mixin transition($lasting:0.5s){
+  -webkit-transition: all $lasting ease;
+  -moz-transition: all $lasting ease;
+  -ms-transition: all $lasting ease;
+  -o-transition: all $lasting ease;
+  transition: all $lasting ease;
+}
+@mixin load_progress_color($color: #FF0000){
+  color: $color;
+  &::-webkit-progress-value {
+    background-color: $color;
+  }
+  &::-moz-progress-bar {
+    background-color: $color;
+  }
+}
+@mixin load_progress_style {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+
+  background-color: #eee;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+
+  //@include rounded-corners(2px);
+
+  font-size: .6em;
+  line-height: 1.5em;
+  text-indent: .5em;
+  height: 4px;
+  border: 0px solid transparent;
+  overflow: hidden;
+  width:100%;
+
+  &::-webkit-progress-bar {
+    background-color: #eee;
+    //@include rounded-corners(2px);
+    //box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  }
+}
+@mixin disable_selection_highlight(){
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@mixin text-truncate(){
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@mixin placeholder_color($color){
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      color: $color;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+     color: $color;
+     opacity:  1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+     color: $color;
+     opacity:  1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+     color: $color;
+  }
+}
+@mixin selection_color($color) {
+  ::selection {
+    background: $color; /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    background: $color; /* Gecko Browsers */
+  }
+}
+
+
+$main_color: #734d9a;
+$main_color_lightened: rgba(115, 77, 154, 0.38);
+$hover_color: #A6C000;
+$appliserv_green: #7EC45F;
+$darker_hover_color: #829b00;
+$danger_color: #ff1c00;
+$warning_color: #f89406;
+$gold_color: #FBC831;
+$darker_danger_color: #b71200;
+$success_color: #5dc80d;
+$light_gray: #F5F5F5;
+$medium_gray: #DDDDDD;
+
+/*** CRITERIA COLORS **/
+$yellow: #FFCC00;
+$orange: #FF7800;
+$blue: #2A82D7;
+$red: #FC331C;
+$green: #00CE58;
+$light_blue: #0EA5FF;

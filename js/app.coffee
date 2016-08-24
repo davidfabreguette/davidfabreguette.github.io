@@ -5,9 +5,13 @@
   # 'duParallax'
   "wu.masonry"
 
+  # Directives
+  'DavFab.directives.homeMasonry'
+
   # Controllers
   'DavFab.controllers.Main'
   'DavFab.controllers.HomeHeader'
+  'DavFab.controllers.Home'
 ])
 
 

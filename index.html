@@ -1,27 +1,26 @@
 ---
-layout: temp
+layout: default
 nav:
   noHeader: false # Triggers a white background on main nav
 ---
 
 {% include home_header.html %}
 
-<div class="container home-container">
+<div class="container home-container" ng-controller="Home">
   <div class="row" id="about">
-    <div masonry>
+    <div class="home-masonry">
 
       {% for post in site.categories.cover %}
-      <div class="col-sm-6 col-md-4 masonry-brick">
-        <div class="thumbnail">
-          <img src="/assets/colorful_coding_thumb.jpg" alt="">
+      <a class="col-sm-6 col-md-4  blog-box"  href="{{ post.url | prepend: site.baseurl }}">
+        <div class="box-wrapper">
+          <img src="{{ post.cover_image.thumb }}" alt="">
           <div class="caption">
-            <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <h2>{{ post.title }}</h2>
+            <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
           </div>
         </div>
-      </div>
+      </a>
       {% endfor %}
-
     </div>
 
     <!-- <div class="col-md-6">

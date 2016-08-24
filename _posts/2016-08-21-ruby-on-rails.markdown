@@ -6,7 +6,7 @@ categories: cover coding
 nav:
   noHeader: true
 cover_image:
-  thumb: assets/colorful_coding_thumb.jpg
+  thumb: assets/colorful_coding.jpg
 ---
 
 Rien à dire de plus !
